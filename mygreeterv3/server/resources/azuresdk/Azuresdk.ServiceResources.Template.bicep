@@ -90,5 +90,20 @@ module resourceRoleAssignment 'br/public:avm/ptn/authorization/resource-role-ass
   }
 }
 
+module readerRoleAssignment 'br/public:avm/ptn/authorization/resource-role-assignment:0.1.1' = {
+  name: 'readerRoleAssignmentDeployment'
+  scope: resourceGroup(subscriptionId, resourceGroupName)
+  params: {
+    // Required parameters
+    principalId: managedIdentity.outputs.principalId
+    resourceId: serviceBusNamespace.id
+    roleDefinitionId: 'acdd72a7-3385-48ef-bd42-f606fba81ae7'
+    // Non-required parameters
+    description: 'Assign Reader permissions to managed identity.'
+    principalType: 'ServicePrincipal'
+    roleName: 'Reader'
+  }
+}
+
 @sys.description('Client Id of the managed identity.')
 output clientId string = managedIdentity.outputs.clientId
