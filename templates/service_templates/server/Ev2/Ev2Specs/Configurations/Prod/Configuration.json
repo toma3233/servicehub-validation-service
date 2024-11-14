@@ -1,6 +1,0 @@
-{
-    "Settings": {
-        "tenantId": "<<.resourceInput.airsRegisteredUserTenantId>>", // The tenant id associated with the airs registration
-        "environment": "prod"
-    }
-}

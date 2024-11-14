@@ -1,5 +1,0 @@
-resources:
-- aksapp.yaml
-
-commonAnnotations:
-  aks.component/sig: service-hub

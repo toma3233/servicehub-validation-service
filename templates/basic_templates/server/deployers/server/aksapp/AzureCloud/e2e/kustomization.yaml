@@ -1,4 +1,0 @@
-resources:
-- ../../base
-patchesStrategicMerge:
-- e2e.yaml
